@@ -1,9 +1,17 @@
-name: Mi accion
+name: Octo Organization CI
+
 on:
-  workflow_dispatch:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
 
 jobs:
-  ElJob:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      echo "hola"
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: echo Hello from Octo Organization
