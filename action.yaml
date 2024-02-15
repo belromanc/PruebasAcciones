@@ -1,0 +1,9 @@
+name: Mi accion
+on:
+  workflow_dispatch:
+
+jobs:
+  ElJob:
+    runs-on: ubuntu-latest
+    steps:
+      echo "hola"
